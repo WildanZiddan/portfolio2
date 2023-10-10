@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">Wyzord</a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+
+    <!-- ========== SCRIPT ========== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                    $('.nav').addClass('affix');
+                    $('.nav a').css('color', 'black');
+                    console.log("OK");
+                } else {
+                    $('.nav').removeClass('affix');
+                    $('.nav a').css('color', '');
+                }
+            });
+        </script>
+    </header>
+
+
+    <section id="home" class="home">
+        <div class="left">
+            <h1 class="job">Junior<br>Frontend<br>Developer</h1>
+            <a href="sosmed.html" class="sosmed-btn">Social Media</a>
+            <p class="location">Based in Jakarta, Indonesia</p>
+        </div>
+        <div class="right">
+            <div class="card">
+                <img src="img/front.png" alt="Card Back">
+                <img src="img/side.png" class="img-top " alt="Card Front">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="about-card" >
+            <p class="desc-text">I’m Frontend Developer <br> who have 2 years experience in Programming, <br> and also can build App and Game too.</p>
+            <p class="about-text">ABOUT ME</p>
+            <h2 class="name-text">WILDAN YAZID ZIDDAN</h2>
+            <div class="img-about"><img src="img/code.jpg" alt=""></div>
+            <a href="CV Wildan Yazid Ziddan.pdf" class="cv">More...</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="text-box">
+            <p class="project-text">MY</p>
+            <h2 class="project-detail">PROJECT</h2>
+        </div>
+
+        <div class="container-project">
+            <!-- main images -->
+            <div class="holder">
+              <div class="slides">
+                <img src="img/portfolio1.png" alt="" />
+              </div>
+          
+              <div class="slides">
+                <img src="img/competition1.png">
+              </div>
+          
+              <div class="slides">
+                <img src="img/portfolio2.png">
+              </div>
+                
+              <div class="slides">
+                <img src="img/competition2.png">
+              </div>
+            </div>
+          
+            <div class="prevContainer"><a class="prev" onclick="plusSlides(-1)">
+              <svg viewBox="0 0 24 24">
+              <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+          </svg>
+              </a></div>
+            <div class="nextContainer"><a class="next" onclick="plusSlides(1)">
+              <svg viewBox="0 0 24 24">
+            <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+          </svg>
+              </a></div>
+          
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <!-- thumnails in a row -->
+            <div class="row">
+              <div class="column">
+                <img class="slide-thumbnail" src="img/portfolio1.png" onclick="currentSlide(1)" alt="First Portfolio website">
+              </div>
+              <div class="column">
+                <img class="slide-thumbnail" src="img/competition1.png" onclick="currentSlide(2)" alt="First Competition website">
+              </div>
+              <div class="column">
+                <img class="slide-thumbnail" src="img/portfolio2.png" onclick="currentSlide(3)" alt="New Portfolio website">
+              </div>
+              <div class="column">
+                <img class="slide-thumbnail" src="img/competition2.png" onclick="currentSlide(4)" alt="Second Competition website">
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section id="experience" class="experience">
+      <div class="text-experience">
+          <p class="experience-text">EDUCATION</p>
+          <h2 class="experience-detail">EXPERIENCE</h2>
+          <img src="./img/Education.png" alt="">
+      </div>
+
+      <div class="text-experience">
+        <p class="experience-text">CARRIER</p>
+        <h2 class="experience-detail">EXPERIENCE</h2>
+        <img src="./img/Carrier.png" alt="">
+      </div>
+  </section>
+
+  <footer>
+    <p>Wildan Yazid Ziddan © 2023 All rights reserved</p>
+  </footer>
+
+</body>
+</html>

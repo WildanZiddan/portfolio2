@@ -1,0 +1,69 @@
+body {
+    background-color: #bcbbbb;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+.icon {
+    height: 60px;
+    width: 60px;
+    border: 3px solid white;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 65px;
+    margin-right: 10px;
+    z-index: 10;
+    -moz-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+    -webkit-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+    box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+    cursor:pointer;
+}  
+.background_circle {
+    display: none;
+    width: 52px;
+    height: 54px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 1;
+    z-index: -1;
+}
+.github:hover, .github:active {
+    background-color:  #333;
+}
+.twitter:hover, .twitter:active {
+    background-color: #55acee;
+}  
+.instagram:hover, .instagram:active {
+    background-color: #cd486b;
+}
+.pinterest:hover, .pinterest:active {
+    background-color: #cb2027;
+}
+
+/* ---------- RESPONSIVE ABOUT 480 ---------- */
+@media screen and (max-width:480px) {
+    .content{
+        display: grid;
+    }
+    .icon_group{
+        margin-left: 14%;
+        width: 100%;
+    }
+    .icon{
+        height: 70px;
+        width: 70px;
+        line-height: 72px;
+        font-size: 35px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }  
+}
